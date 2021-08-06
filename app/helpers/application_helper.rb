@@ -1,6 +1,6 @@
 module ApplicationHelper
     def title
-        base_title = "Motiv'Action"
+        base_title = "Mon Bac en 2022"
         if @title.nil?
         base_title
         else
