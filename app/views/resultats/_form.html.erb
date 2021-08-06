@@ -4,7 +4,7 @@
 <!-- component -->
 <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
   <div class="relative py-3 w-full max-w-xl sm:mx-auto">
-    <div class="relative p-8 bg-white shadow-sm sm:rounded-xl">
+    <div class="relative p-4 bg-white shadow-sm sm:rounded-xl">
     <% if resultat.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(resultat.errors.count, "error") %> prohibited this resultat from being saved:</h2>
@@ -17,102 +17,67 @@
     </div>
   <% end %>
       <div class="w-full">
-      <h2>Informe Mr Tiémé de ton resultat :</h2>
+      <h2 class="font-bold md:text-2xl sm:text-xl">Se Préparer et Affronter le Bac 2021</h2>
+      <p class="bg-green-500 p-2 font-semibold">Pré-inscrire toi en remplissant les champs </p>
         <div class="mb-5 relative">
-          <%= f.text_field :username, id:"username", class:"peer pt-8 border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16 placeholder-transparent", placeholder:"Ton nom complet", autocomplete:"off"  %>
-          <label for="username" class="peer-placeholder-shown:opacity-100   opacity-75 peer-focus:opacity-75 peer-placeholder-shown:scale-100 scale-75 peer-focus:scale-75 peer-placeholder-shown:translate-y-0 -translate-y-3 peer-focus:-translate-y-3 peer-placeholder-shown:translate-x-0 translate-x-1 peer-focus:translate-x-1 absolute top-0 left-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out">Mon nom est:</label>
+          
+          <%= f.text_field :username,autofocus: true, class:"w-full h-12 border border-gray-800 rounded px-3",  placeholder:"Mon nom est :" %>
         </div>
         <div class="mb-5 relative">
-          <%= f.text_field :contact, id:"contact", class:"peer pt-8 border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16 placeholder-transparent", placeholder:"contact", autocomplete:"off"  %>
-          <label for="contact" class="peer-placeholder-shown:opacity-100   opacity-75 peer-focus:opacity-75 peer-placeholder-shown:scale-100 scale-75 peer-focus:scale-75 peer-placeholder-shown:translate-y-0 -translate-y-3 peer-focus:-translate-y-3 peer-placeholder-shown:translate-x-0 translate-x-1 peer-focus:translate-x-1 absolute top-0 left-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out">Mon contact est:</label>
+          <%= f.text_field :contact, id:"contact", class:"w-full h-12 border border-gray-800 rounded px-3", placeholder:"Mon N° WhatsApp est :" %>
+          <small>Avec ton N° WhatsApp, tu peux recevoir vite le message le premier jour de l'ouverture de la plateforme</small>
         </div>
-        <div class="mb-5 relative">
-          <%= f.text_field :contact_parent, id:"contact", class:"peer pt-8 border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16 placeholder-transparent", placeholder:"Contact du parent", autocomplete:"off"  %>
-          <label for="contact" class="peer-placeholder-shown:opacity-100   opacity-75 peer-focus:opacity-75 peer-placeholder-shown:scale-100 scale-75 peer-focus:scale-75 peer-placeholder-shown:translate-y-0 -translate-y-3 peer-focus:-translate-y-3 peer-placeholder-shown:translate-x-0 translate-x-1 peer-focus:translate-x-1 absolute top-0 left-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out">contact de mon parent est:</label>
-        </div>
-        <div class="mb-5 relative">
-          <div class="title py-3 my-auto px-5 bg-blue-500 text-white text-sm font-semibold mr-3">je suis dans la ville de: </div>
-          <label class="flex radio p-2 cursor-pointer">
-            <%= f.radio_button :ville, :Tiassale,  class:"my-auto transform scale-125" %>
-            
-            <div class="title px-2">Tiassalé</div>
-          </label>
-
-          <label class="flex radio p-2 cursor-pointer">
-            <%= f.radio_button :ville, :"N'Douci",  class:"my-auto transform scale-125" %>
-            
-            <div class="title px-2">N'Douci</div>
-          </label>
-
-        </div>
-        <div class="mb-5 relative">
-          <%= f.text_field :ecole, id:"school", class:"peer pt-8 border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16 placeholder-transparent", placeholder:"Ecole", autocomplete:"off"  %>
-          <label for="school" class="peer-placeholder-shown:opacity-100   opacity-75 peer-focus:opacity-75 peer-placeholder-shown:scale-100 scale-75 peer-focus:scale-75 peer-placeholder-shown:translate-y-0 -translate-y-3 peer-focus:-translate-y-3 peer-placeholder-shown:translate-x-0 translate-x-1 peer-focus:translate-x-1 absolute top-0 left-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out">je fréquente a </label>
-        </div>
+              
 
         <!-- component -->
         <div class="mb-5 relative">
           <div class="title py-3 my-auto px-5 bg-blue-500 text-white text-sm font-semibold mr-3">je suis en série</div>
-          <label class="flex radio p-2 cursor-pointer">
+          <label class="flex radio p-1 cursor-pointer">
             <%= f.radio_button :serie, :A1, class:"my-auto transform scale-125"%>
             <div class="title px-2">en A1</div>
           </label>
 
-          <label class="flex radio p-2 cursor-pointer">
+          <label class="flex radio p-1 cursor-pointer">
             <%= f.radio_button :serie, :A2, class:"my-auto transform scale-125"%>
             <div class="title px-2"> en A2</div>
           </label>
 
-          <label class="flex radio p-2 cursor-pointer">
+          <label class="flex radio p-1 cursor-pointer">
             <%= f.radio_button :serie, :D, class:"my-auto transform scale-125"%>
             <div class="title px-2">en D</div>
           </label>
 
-          <label class="flex radio p-2 cursor-pointer">
+          <label class="flex radio p-1 cursor-pointer">
             <%= f.radio_button :serie, :C, class:"my-auto transform scale-125"%>
             <div class="title px-2">en C</div>
           </label>
-
-        </div>
-
-        <div class="mb-5 relative">
-          <div class="title py-3 my-auto px-5 bg-blue-500 text-white text-sm font-semibold mr-3">je suis </div>
-          <label class="flex radio p-2 cursor-pointer">
-            <%= f.radio_button :genre, :Femme, class:"my-auto transform scale-125"%>
-            <div class="title px-2">Une Femme</div>
-          </label>
-
-          <label class="flex radio p-2 cursor-pointer">
-            <%= f.radio_button :genre, :Homme, class:"my-auto transform scale-125"%>
-            <div class="title px-2">Un Homme</div>
+          <label class="flex radio p-1 cursor-pointer">
+            <%= f.radio_button :serie, :Pas_Eleve, class:"my-auto transform scale-125"%>
+            <div class="title px-2">Pas élève</div>
           </label>
 
         </div>
-        <div class="mb-5 relative">
-          <%= f.text_field :age, id:"age", class:"peer pt-8 border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16 placeholder-transparent", placeholder:"Ton age", autocomplete:"off"  %>
-          <label for="age" class="peer-placeholder-shown:opacity-100   opacity-75 peer-focus:opacity-75 peer-placeholder-shown:scale-100 scale-75 peer-focus:scale-75 peer-placeholder-shown:translate-y-0 -translate-y-3 peer-focus:-translate-y-3 peer-placeholder-shown:translate-x-0 translate-x-1 peer-focus:translate-x-1 absolute top-0 left-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out">Je suis âgé de</label>
-        </div>
-        
+
         
         <div class="my-5 relative">
           <div class="title py-3 my-auto px-5 bg-blue-500 text-white text-sm font-semibold mr-3">j'ai validé le bac</div>
           <label class="flex radio p-2 cursor-pointer">
-            <%= f.radio_button :status, :Success, class:"my-auto transform scale-125"%>
-            <div class="title px-2">oui, avec succes</div>
+            <%= f.radio_button :status, :D, class:"my-auto transform scale-125"%>
+            <div class="title px-2">Reprend le Bac</div>
           </label>
 
           <label class="flex radio p-2 cursor-pointer">
             <%= f.radio_button :status, :Non, class:"my-auto transform scale-125"%>
-            <div class="title px-2"> Non!</div>
+            <div class="title px-2"> Non! c'est ma premiere fois</div>
+          </label>
+          <label class="flex radio p-2 cursor-pointer">
+            <%= f.radio_button :status, :Non, class:"my-auto transform scale-125"%>
+            <div class="title px-2"> Non! je en suis pas élève</div>
           </label>
         </div>
 
-        <div class="mb-5 relative">
-          <%= f.text_area :feedback, id:"status", class:"peer pt-8 border border-gray-200 focus:outline-none rounded-md focus:border-gray-500 focus:shadow-sm w-full p-3 h-16 placeholder-transparent", placeholder:"status", autocomplete:"off"  %>
-          <label for="status" class="peer-placeholder-shown:opacity-100   opacity-75 peer-focus:opacity-75 peer-placeholder-shown:scale-100 scale-75 peer-focus:scale-75 peer-placeholder-shown:translate-y-0 -translate-y-3 peer-focus:-translate-y-3 peer-placeholder-shown:translate-x-0 translate-x-1 peer-focus:translate-x-1 absolute top-0 left-0 px-3 py-5 h-full pointer-events-none transform origin-left transition-all duration-100 ease-in-out">Votre message pour Mr Tiémé.</label>
-        </div>
-        </div>
-        <%= f.submit "Envoyez", class:"w-full bg-indigo-600 text-white p-3 rounded-md"%>
+      </div>
+        <%= f.submit "Envoyez", class:"w-full bg-green-500 text-bold p-3 rounded-md"%>
       </div>
     </div>
   </div>
